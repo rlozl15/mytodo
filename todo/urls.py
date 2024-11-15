@@ -1,9 +1,11 @@
 from django.urls import path, include
-from .views import TodoListAPIView, TodoAPIView, DoneTodoListAPIView, DoneTodoAPIView
+from rest_framework.routers import DefaultRouter
+from .views import TodoViewSet, DoneTodoViewSet
+
+router = DefaultRouter()
+router.register(r'todos', TodoViewSet, basename='todo')
+router.register(r'done-todos', DoneTodoViewSet, basename='done-todo')
 
 urlpatterns = [
-    path("", TodoListAPIView.as_view()),
-    path("<int:id>/", TodoAPIView.as_view()),
-    path("<int:id>/done/", DoneTodoAPIView.as_view()),
-    path("done/", DoneTodoListAPIView.as_view()),
+    path('', include(router.urls)),
 ]
