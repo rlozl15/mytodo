@@ -12,9 +12,9 @@
    - 새로운 Todo 생성 및 수정 기능
    - Todo 완료 기능
 2. Test 코드 구현   
-   각 API 기능에 대한 테스트 코드 작성
+   - 각 API 기능에 대한 테스트 코드 작성
 3. Docker 기반 개발 환경 구성
-   Docker Compose로 환경을 설정해 컨테이너에서 일관되게 실행할 수 있도록 구성했습니다.
+   - Docker Compose를 이용해 일관된 개발 환경 구성
 
 ## 기술 스택
     - 백엔드: Django REST Framework
